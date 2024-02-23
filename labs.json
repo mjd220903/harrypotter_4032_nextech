@@ -1,0 +1,45 @@
+{
+    "labs": {
+      "grd": {
+        "hardware_specs": {
+          "CPU": "Intel i5",
+          "RAM": ["2GB", "4GB", "8GB"],
+          "ROM": ["1TB", "500GB", "320GB"]
+        },
+        "software_specs": {
+          "OS": ["Windows", "Linux"],
+          "IDEs": ["Code Blocks", "NetBeans", "Oracle"],
+          "Code Editors": ["Visual Studio Code"],
+          "Frameworks": ["Node.js", "Python 3.10.11", "Flutter SDK"]
+        }
+      },
+      "hardware": {
+        "hardware_specs": {
+          "CPU": "Intel i5",
+          "RAM": ["2GB", "4GB", "8GB"],
+          "ROM": ["1TB", "500GB", "320GB"],
+          "Additional_Hardware": ["Resistors", "Breadboard", "Circuits"]
+        },
+        "software_specs": {
+          "OS": ["Windows", "Linux"],
+          "IDEs": ["Code Blocks", "NetBeans", "Oracle"],
+          "Code Editors": ["Visual Studio Code"],
+          "Frameworks": ["Node.js", "Python 3.10.11", "Flutter SDK"]
+        }
+      },
+      "software": {
+        "hardware_specs": {
+          "CPU": "Intel i5",
+          "RAM": ["2GB", "4GB", "8GB"],
+          "ROM": ["1TB", "500GB", "320GB"]
+        },
+        "software_specs": {
+          "OS": ["Windows", "Linux"],
+          "IDEs": ["Code Blocks", "NetBeans", "Oracle"],
+          "Code Editors": ["Visual Studio Code"],
+          "Frameworks": ["Node.js", "Python 3.10.11", "Flutter SDK"],
+          "Additional_Software": ["Jupyter", "Anaconda", "Flowgorithm", "Scratch", "R"]
+        }
+      }
+    }
+  }
