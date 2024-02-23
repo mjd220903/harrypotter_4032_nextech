@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Requirements Generator</title>
+</head>
+<body>
+    <h1>Technical Requirements Generator</h1>
+    <form id="requirementsForm">
+        <label for="applicationType">Application Type:</label>
+        <select id="applicationType">
+            <option value="web">Web</option>
+            <option value="mobile">Mobile</option>
+            <option value="desktop">Desktop</option>
+        </select><br>
+
+        <label for="features">Framework Used:</label>
+        <!-- <input type="text" id="features"><br> -->
+        <select name="features" id="features">
+
+        </select><br>
+
+
+        <button type="submit">Generate Requirements</button>
+    </form>
+
+    <div id="output">
+    </div>
+
+    <script>
+        const applicationType = {
+            web: ['Angular','Vue.js','Svelte','Ember.js','React'],
+            mobile: ['React Native','Flutter','Xamarin','Kotlin','Ionic'],
+            desktop: ['Electron','JavaFX','NW.js','Avalonia','Qt']
+        };
+
+        function updateAppln() {
+            const appln = document.getElementById('applicationType');
+            const framework = document.getElementById('features');
+            const selectedAppln = appln.value;
+
+            framework.innerHTML = '';
+
+            const defaultOption = document.createElement('option');
+            defaultOption.value = 'none';
+            defaultOption.text = 'Select Framework';
+            framework.appendChild(defaultOption);
+
+            if (selectedAppln !== 'none') {
+                const frameworks = applicationType[selectedAppln];
+                frameworks.forEach(frame => {
+                    const option = document.createElement('option');
+                    option.value = frame;
+                    option.text = frame;
+                    framework.appendChild(option);
+                });
+            }
+        }
+        document.getElementById('applicationType').addEventListener('change', updateAppln);
+
+        document.getElementById('requirementsForm').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            const applicationType = document.getElementById('applicationType').value;
+            const features = document.getElementById('features').value;
+            
+            try {
+                const response = await fetch('/api/recommendations', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        applicationType,
+                        features
+                        // Add other input parameters as needed
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to fetch recommendations');
+                }
+
+                const recommendations = await response.json();
+
+                displayRequirements(recommendations);
+            } catch (error) {
+                console.error('Error:', error.message);
+            }
+        });
+
+        function displayRequirements(requirements) {
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = `
+                <h2>Technical Requirements</h2>
+                <h3>Hardware</h3>
+                <table style="margin: left; text-align: center; padding: 20px;">
+                    <tr>
+                        <th>Component</th>
+                        <th>Minimum Requirement</th>
+                    </tr>
+                    <tr>
+                        <td>CPU</td>
+                        <td>${requirements.hardware.CPU}</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>${requirements.hardware.RAM}</td>
+                    </tr>
+                    <tr>
+                        <td>ROM</td>
+                        <td>${requirements.hardware.ROM}</td>
+                    </tr>
+                </table>
+                <h3>Software</h3>
+                <table style="margin: left; text-align: center; padding: 10px;">
+                    <tr>
+                        <th>Software</th>
+                        <th>Requirement</th>
+                    </tr>
+                    ${Object.entries(requirements.software).map(([key, value]) => `
+                        <tr>
+                            <td>${key}</td>
+                            <td>${value}</td>
+                        </tr>
+                    `).join('')}
+                </table>
+            `;
+        }
+
+    </script>
+</body>
+</html>

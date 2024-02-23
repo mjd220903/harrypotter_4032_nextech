@@ -1,0 +1,192 @@
+{
+    "web": {
+            "Angular": {
+              "hardware": {
+                "CPU": "Intel i5",
+                "RAM": "8GB",
+                "ROM": "10GB"
+              },
+              "software": {
+                "Operating System": "Windows, macOS, Linux",
+                "Node.js": "Required",
+                "Code Editor": "Visual Studio Code"
+              }
+            },
+            "Vue.js": {
+              "hardware": {
+                "CPU": "Intel i5",
+                "RAM": "4GB",
+                "ROM": "5GB"
+              },
+              "software": {
+                "Operating System": "Windows, macOS, Linux",
+                "Node.js": "Required",
+                "Code Editor": "Visual Studio Code"
+              }
+            },
+            "Svelte": {
+              "hardware": {
+                "CPU": "Intel i3",
+                "RAM": "2GB",
+                "ROM": "5GB"
+              },
+              "software": {
+                "Operating System": "Windows, macOS, Linux",
+                "Node.js": "Required",
+                "Code Editor": "Visual Studio Code"
+              }
+            },
+            "Ember.js": {
+              "hardware": {
+                "CPU": "Intel i5",
+                "RAM": "8GB",
+                "ROM": "10GB"
+              },
+              "software": {
+                "Operating System": "Windows, macOS, Linux",
+                "Node.js": "Required",
+                "Code Editor": "Visual Studio Code"
+              }
+            },
+            "React": {
+              "hardware": {
+                "CPU": "Intel i5",
+                "RAM": "4GB",
+                "ROM": "10GB"
+              },
+              "software": {
+                "Operating System": "Windows, macOS, Linux",
+                "Node.js": "Required",
+                "Code Editor": "Visual Studio Code"
+              }
+            }        
+    },
+    "mobile": {
+        "React Native": {
+          "hardware": {
+            "CPU": "Intel i5",
+            "RAM": "4GB",
+            "ROM": "10GB"
+          },
+          "software": {
+            "Operating System": "Windows, macOS, Linux",
+            "Node.js": "Required",
+            "Code Editor": "Visual Studio Code"
+          }
+        },
+        "Flutter": {
+          "hardware": {
+            "CPU": "Intel i5",
+            "RAM": "8GB",
+            "ROM": "10GB"
+          },
+          "software": {
+            "Operating System": "Windows, macOS, Linux",
+            "Flutter SDK": "Required",
+            "Code Editor": "Visual Studio Code, Android Studio"
+          }
+        },
+        "Xamarin": {
+          "hardware": {
+            "CPU": "Intel i5",
+            "RAM": "8GB",
+            "ROM": "10GB"
+          },
+          "software": {
+            "Operating System": "Windows, macOS",
+            ".NET Core SDK": "Required",
+            "Code Editor": "Visual Studio Code",
+            "Xamarin SDK": "Required"
+          }
+        },
+        "Kotlin": {
+          "hardware": {
+            "CPU": "Intel i5",
+            "RAM": "4GB",
+            "ROM": "5GB"
+          },
+          "software": {
+            "Operating System": "Windows, macOS, Linux",
+            "Code Editor": "Android Studio",
+            "Kotlin Plugin": "Required"
+          }
+        },
+        "Ionic": {
+          "hardware": {
+            "CPU": "Intel i3",
+            "RAM": "4GB",
+            "ROM": "5GB"
+          },
+          "software": {
+            "Operating System": "Windows, macOS, Linux",
+            "Node.js": "Required",
+            "Code Editor": "Visual Studio Code, Atom, Sublime Text, etc.",
+            "Ionic CLI": "Required"
+          }
+        }
+      },
+
+    "desktop": {
+  "Electron": {
+    "hardware": {
+      "CPU": "Intel i3",
+      "RAM": "4GB",
+      "ROM": "10GB"
+    },
+    "software": {
+      "Operating System": "Windows, macOS, Linux",
+      "Node.js": "Required",
+      "Code Editor": "Visual Studio Code"
+    }
+  },
+  "JavaFX": {
+    "hardware": {
+      "CPU": "Intel i5",
+      "RAM": "4GB",
+      "ROM": "5GB"
+    },
+    "software": {
+      "Operating System": "Windows, macOS, Linux",
+      "Java Development Kit": "Required",
+      "Integrated Development Environment": "IntelliJ IDEA, Eclipse"
+    }
+  },
+  "NW.js": {
+    "hardware": {
+      "CPU": "Intel i3",
+      "RAM": "4GB",
+      "ROM": "10GB"
+    },
+    "software": {
+      "Operating System": "Windows, macOS, Linux",
+      "Node.js": "Required",
+      "Code Editor": "Visual Studio Code"
+    }
+  },
+  "Avalonia": {
+    "hardware": {
+      "CPU": "Intel i5",
+      "RAM": "8GB",
+      "ROM": "10GB"
+    },
+    "software": {
+      "Operating System": "Windows, macOS, Linux",
+      ".NET Core SDK": "Required",
+      "Integrated Development Environment": "Visual Studio Code"
+    }
+  },
+  "Qt": {
+    "hardware": {
+      "CPU": "Intel i5",
+      "RAM": "4GB",
+      "ROM": "10GB"
+    },
+    "software": {
+      "Operating System": "Windows, macOS, Linux",
+      "Qt Framework": "Required",
+      "Integrated Development Environment": "Qt Creator"
+    }
+  }
+}
+  }
+  
